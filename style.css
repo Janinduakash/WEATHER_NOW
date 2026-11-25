@@ -1,6 +1,7 @@
 #txtCity {
     border-radius: 45px;
     margin-bottom: 10px;
+    height: 25px;
 }
 
 #searchBtn {
@@ -9,10 +10,13 @@
 }
 
 #weatherInfo {
+    display: none;
     border: 2px solid black;
-    margin: auto;
+    margin: 0 0 0 20px;
     padding: 20px;
-    padding-right: auto;
+    background-color: rgb(191, 202, 198);
+    width: 200px;
+    border-radius: 10px;
 }
 
 /* body {

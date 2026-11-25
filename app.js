@@ -26,9 +26,10 @@ function btnSearchCityOnAction() {
             allConditions.innerHTML = `
                 <h3>All Conditions</h3>
                 <img src="https:${data.current.condition.icon}" alt="Weather icon">
-                <p>Humidity${data.current.humidity}%</p>
-                <p>Wind${data.current.wind_kph}km/h</p>
-                <p>Real Feel${data.current.feelslike_c}°C</p>
+                <p>Humidity ${data.current.humidity} %</p>
+                <p>Wind ${data.current.wind_kph} km/h</p>
+                <p>Real Feel ${data.current.feelslike_c} °C</p>
+                <p>Pressure ${data.current.pressure_mb} hPa</p>
             `;
             weatherInfo.style.display = "block";
         });

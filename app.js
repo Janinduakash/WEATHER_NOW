@@ -4,6 +4,7 @@ const baseUrl = "https://api.weatherapi.com/v1";
 function btnSearchCityOnAction() {
     const city = document.getElementById("txtCity").value.trim();
     const weatherInfo = document.getElementById("weatherInfo");
+    weatherInfo.style.display = "none";
 
     if (!city) {
         alert("Enter name of city.");
@@ -14,11 +15,13 @@ function btnSearchCityOnAction() {
         .then(res => res.json())
         .then(data => {
             weatherInfo.innerHTML = `
+                
                 <h2>${data.location.name}, ${data.location.country}</h2>
                 <h1>${data.current.condition.text}</h1>
                 <img src="https:${data.current.condition.icon}" alt="Weather icon">
                 <p>${data.current.temp_c}°C</p>
                 <p>${data.current.humidity}%</p>
             `;
+            weatherInfo.style.display = "block";
         });
 }

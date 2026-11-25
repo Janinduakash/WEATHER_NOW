@@ -15,12 +15,19 @@ function btnSearchCityOnAction() {
         .then(res => res.json())
         .then(data => {
             weatherInfo.innerHTML = `
-                
                 <h2>${data.location.name}, ${data.location.country}</h2>
                 <h1>${data.current.condition.text}</h1>
                 <img src="https:${data.current.condition.icon}" alt="Weather icon">
                 <p>${data.current.temp_c}°C</p>
                 <p>${data.current.humidity}%</p>
+            `;
+            weatherInfo.style.display = "block";
+
+            allConditions.innerHTML = `
+                <h3>All Conditions</h3>
+                <img src="https:${data.current.condition.icon}" alt="Weather icon">
+                <p>${data.current.humidity}%</p>
+                <p>${data.current.wind_kph}km/h</p>
             `;
             weatherInfo.style.display = "block";
         });

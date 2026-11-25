@@ -1,0 +1,14 @@
+#txtCity {
+    border-radius: 45px;
+
+}
+
+#searchBtn {
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+#weatherInfo {
+    border: 2px solid black;
+    margin: auto;
+}

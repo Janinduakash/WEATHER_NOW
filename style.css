@@ -11,12 +11,10 @@
 
 #weatherInfo {
     display: none;
-    border: 2px solid black;
-    margin: 0 0 0 20px;
+    margin: 0 0 0;
     padding: 20px;
-    background-color: rgb(191, 202, 198);
     width: 200px;
-    border-radius: 10px;
+
 }
 
 /* body {

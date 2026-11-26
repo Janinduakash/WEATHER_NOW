@@ -16,21 +16,21 @@ function btnSearchCityOnAction() {
         .then(data => {
             weatherInfo.innerHTML = `
                 <h2>${data.location.name}, ${data.location.country}</h2>
-                <h1>${data.current.condition.text}</h1>
+                <h3>${data.current.condition.text}</h3>
                 <img src="https:${data.current.condition.icon}" alt="Weather icon">
                 <p>${data.current.temp_c}°C</p>
-                <p>${data.current.humidity}%</p>
+                <p>Feels like ${data.current.feelslike_c} °C</p>
+                
             `;
             weatherInfo.style.display = "block";
 
             allConditions.innerHTML = `
-                <h3>All Conditions</h3>
-                <img src="https:${data.current.condition.icon}" alt="Weather icon">
+                <h1>All Conditions</h1>
                 <p>Humidity ${data.current.humidity} %</p>
                 <p>Wind ${data.current.wind_kph} km/h</p>
-                <p>Real Feel ${data.current.feelslike_c} °C</p>
+                <p>Visibility ${data.current.vis_km} km</p>
                 <p>Pressure ${data.current.pressure_mb} hPa</p>
             `;
-            weatherInfo.style.display = "block";
+            allConditions.style.display = "block";
         });
 }
